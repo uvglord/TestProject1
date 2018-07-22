@@ -21,7 +21,6 @@ public class TestSelectionSort {
 			array[index] = array[i];
 			array[i] = temp;
 		}
-
 	}
 
 	private static void printArray(String str, int[] array) {
