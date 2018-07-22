@@ -18,16 +18,26 @@ public class BubbleSortOptimised {
 		System.out.println();
 	}
 
+	/*
+	 * This method will not evaluate further loops, 
+	 * if the list is sorted in earlier loops
+	 */
+	 
 	static void bubbleSort(int[] arr) {
+		boolean sorted  = false;
 		for (int i = 0; i < arr.length; i++) {
+			sorted = false;
 			for (int j = 0; j < arr.length - i - 1; j++) {
 				if (arr[j] > arr[j + 1]) {
 					int temp = arr[j];
 					arr[j] = arr[j + 1];
 					arr[j + 1] = temp;
+					sorted = true;
 				}
 			}
-
+			if(!sorted) {
+				break;
+			}
 			System.out.print("After pass " + i + "  : ");
 			// Printing array after pass
 			printArray(arr);
