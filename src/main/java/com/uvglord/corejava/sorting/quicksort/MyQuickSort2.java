@@ -50,6 +50,8 @@ public class MyQuickSort2 {
     }
  
     private static void exchangeNumbers(int i, int j) {
+    	if(i==j)
+    		return;
         int temp = array[i];
         array[i] = array[j];
         array[j] = temp;
@@ -57,7 +59,7 @@ public class MyQuickSort2 {
     }
     
     private static void printArray(String str, int[] array) {
-		if(str.startsWith("Intt"))
+		if(str.startsWith("Fin"))
 			return;
 		System.out.print(str + " : ");
 		for (int i : array) {
