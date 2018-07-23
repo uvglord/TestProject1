@@ -1,42 +1,43 @@
 package com.uvglord.corejava.sorting.bubblesort;
 
+import java.util.Random;
+
 public class TestBubbleSort {
 
 	public static void main(String[] args) {
-		int array[] = {2, 4, 6, 3, 5, 5, 6, 9, 0, 1};
+		int size = 10;
+		int[] array = new int[size];
+		
+		Random random = new Random();
+		for(int i=0;i<size; i++)
+			array[i]=random.nextInt(size);
+		
 		printArray("Initial array", array);
 		sort(array);
+		printArray("Final   array", array);
 	}
 
 	private static void sort(int[] array) {
-		int i = array.length;
-		boolean sorted;
-		for(int j=0;j<i;j++) {
-			sorted = false;
-			for(int k=j+1; k<i; k++) {
-				if(array[k]>array[j]) {
-					swap(array, k, j);
-					sorted = true;
-					//printArray("\t intermediate"+j, array);
-				}
-			}
-			//if(!sorted)
-				//break;
-			printArray("After pass  "+j, array);
+		for (int i = 0; i < array.length-1; i++) {
+			for (int j = i + 1; j < array.length; j++)
+				if (array[j] > array[i])
+					swap(array, i, j);
+			printArray("After  pass "+i, array);
 		}
-		
 	}
 
-	private static void swap(int[] array, int k, int j) {
-		int temp = array[k];
-		array[k] = array[j];
+	private static void swap(int[] array, int i, int j) {
+		int temp = array[i];
+		array[i] = array[j];
 		array[j] = temp;
 	}
 
 	private static void printArray(String str, int[] array) {
-		System.out.print(str+" : ");
-		for(int i :array) {
-			System.out.print(i+" ");
+		if(str.startsWith("Aft"))
+			return;
+		System.out.print(str + " : ");
+		for (int i : array) {
+			System.out.print(i + " ");
 		}
 		System.out.println();
 	}
