@@ -13,35 +13,29 @@ public class TestInsertionSort {
 			array[i] = random.nextInt(size);
 
 		printArray("Initial array", array);
-		sort(array);
+		doInsertSort(array);
 		printArray("Final   array", array);
 
 	}
 
-	private static void sort(int[] array) {
-		int count=0;
+	private static void doInsertSort(int[] array) {
 		for(int i=1; i<array.length; i++) {
-			for(int j=i;j>0; j--) {
-				count++;
-				if(array[j]<array[j-1]) {
+			for(int j=i; j>0; j--) 
+				if(array[j]>array[j-1]) 
 					swap(array, j-1, j);
-				}else {
-					break;
-				}
-			}
-			printArray("After  pass "+i, array);
+			//printArray("After  pass "+i, array);
 		}
-		System.out.println("Total evaluations "+count);
 	}
 
 	private static void swap(int[] array, int i, int j) {
 		int temp = array[i];
 		array[i] = array[j];
 		array[j] = temp;
+		printArray("Interimn pass", array);
 	}
 
 	private static void printArray(String str, int[] array) {
-		if (str.startsWith("Aft"))
+		if (str.startsWith("Aftt"))
 			return;
 		System.out.print(str + " : ");
 		for (int i : array) {
