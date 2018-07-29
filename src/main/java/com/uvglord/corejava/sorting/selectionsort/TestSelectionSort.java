@@ -1,7 +1,11 @@
 package com.uvglord.corejava.sorting.selectionsort;
 
 import java.util.Random;
-
+/*
+ * The selection sort is a combination of searching and sorting. 
+ * During each pass, the unsorted element with the smallest (or largest) 
+ * value is moved to its proper position in the array
+ */
 public class TestSelectionSort {
 
 	public static void main(String[] args) {
@@ -14,7 +18,7 @@ public class TestSelectionSort {
 		
 		printArray("Initial array", array);
 		selectionSort(array);
-		printArray("Final  array ", array);
+		printArray("Final   array", array);
 	}
 
 	private static void selectionSort(int[] array) {

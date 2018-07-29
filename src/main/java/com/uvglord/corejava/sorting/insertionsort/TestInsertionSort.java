@@ -2,6 +2,11 @@ package com.uvglord.corejava.sorting.insertionsort;
 
 import java.util.Random;
 
+/*
+ * Insertion sort is a simple sorting algorithm, 
+ * it builds the final sorted array one item at a time. 
+ * It is much less efficient on large lists than other sort algorithms. 
+ */
 public class TestInsertionSort {
 
 	public static void main(String[] args) {

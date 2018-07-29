@@ -1,7 +1,13 @@
 package com.uvglord.corejava.sorting.bubblesort;
 
 import java.util.Random;
-
+/*
+ * Bubble sort, also referred to as sinking sort, 
+ * is a simple sorting algorithm that works by repeatedly stepping through the 
+ * list to be sorted, comparing each pair of adjacent items and swapping them 
+ * if they are in the wrong order. The pass through the list is repeated until 
+ * no swaps are needed, which indicates that the list is sorted.
+ */
 public class TestBubbleSort {
 
 	public static void main(String[] args) {
