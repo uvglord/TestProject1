@@ -6,10 +6,13 @@ public class StringExample1 {
 
 		char[] ch = {'m','y',' ','s','t','r','i','n','g'};
 		
-		String str = ch.toString();
-		str = String.copyValueOf(ch);
+		String str = String.copyValueOf(ch);
 		
 		System.out.println(str);
+		
+		String s = new String(ch);
+		
+		System.out.println(s);
 	}
 
 }
