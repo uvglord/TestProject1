@@ -12,6 +12,6 @@ public class Create2 implements Runnable{
 		//t1.run(); will run directly, not creating a thread
 		Thread t = new Thread(target);
 		t.start();//always call start
-		
+		new Thread(target).start();
 	}
 }
