@@ -1,6 +1,6 @@
-package com.uvglord.corejava.multithreading.creation;
+package com.uvglord.corejava.multithreading;
 
-public class Thread2 implements Runnable{
+public class Create2 implements Runnable{
 
 	@Override
 	public void run() {
@@ -8,7 +8,7 @@ public class Thread2 implements Runnable{
 	}
 	
 	public static void main(String[] args) {
-		Thread2 target = new Thread2();
+		Create2 target = new Create2();
 		//t1.run(); will run directly, not creating a thread
 		Thread t = new Thread(target);
 		t.start();//always call start
