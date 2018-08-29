@@ -9,7 +9,7 @@ import java.util.Map;
  * Otherwise, replaces the associated value with the results of the given re mapping function, 
  * or removes if the result is null.
  */
-public class ExampleMerge {
+public class ExampleMerge{
     public static void main(String[] args) {
         Map<String, String> map = new HashMap<>();
         map.put("1", "1");
